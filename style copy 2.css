@@ -1,0 +1,555 @@
+@font-face {
+    font-family: helveticaneue-thin;
+    src: url("/Ressources/Fonts/helveticaneue-thin.ttf");
+}
+
+@font-face {
+    font-family: meloriac;
+    src: url("/Ressources/Fonts/meloriac-webfont.woff");
+}
+
+@font-face {
+    font-family: maxine-sans;
+    src: url("/Ressources/Fonts/Maxine\ Sans.otf");
+}
+
+@font-face {
+    font-family: 'Niveau Grotesk Bold';
+    src: url('../Niveau\ Grotesk\ Bold.otf');
+}
+
+* {
+    font-family: 'Niveau Grotesk Bold', Geneva, Tahoma, sans-serif;
+    /* font-family: meloriac;
+    font-weight: 100; */
+    list-style: none;
+    text-decoration: none;
+}
+
+
+
+body
+{
+    margin: 0;
+    padding: /* 30px 0 0 */ 0;
+    background-color: black;
+}
+
+ul
+{
+    list-style: none;
+}
+
+
+
+
+
+
+/* ----------- NAV BAR ----------- */
+
+nav
+{
+    display: flex;
+    width: 100%;
+    height: 6vh;
+
+    /* border-bottom: 2px solid black; */
+
+    /* border-bottom: 1px solid white; */
+
+    box-sizing: border-box;
+    background-color: black;
+}
+
+.logo
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+}
+
+.logoimg
+{
+    width: 40px;
+}
+
+.reseaux
+{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    /* align-items: flex-end; */
+    align-items: center;
+}
+
+.iconsoc
+{
+    display: flex;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+.iconsoc1
+{
+    padding: 0 10px;
+}
+
+.iconsoc1 i
+{
+    /* color: black; */
+    color: white;
+}
+
+
+/* MENU BUTTON */
+
+.menu-btn 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    padding: 3px;
+    /* padding-bottom: 3vh; */
+
+    
+}
+
+.menu-btn_burger
+{
+    width: 30px;
+    height: 4px;
+    /* background: #000; */
+    background: white;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu-btn_burger::before,
+.menu-btn_burger::after
+{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    /* background: #000; */
+    background: white;
+    border-radius: 5px;
+    transition: all 0.9s ease-in-out;
+    
+}
+
+.menu-btn_burger::before
+{
+    transform: translateY(-8px);
+}
+
+.menu-btn_burger::after
+{
+    transform: translateY(8px);
+}
+
+
+
+/* MENU BUTTON ANIMATION */
+
+.menu-btn.open .menu-btn_burger
+{
+    transform: translateX(50px);
+    background: transparent;
+    box-shadow: none;
+}
+
+.menu-btn.open .menu-btn_burger::after
+{
+    /* transform: rotate(45deg) translate(35px, -35px); */
+    transform: translateX(-50px); 
+    width: 15px;
+}
+
+.menu-btn.open .menu-btn_burger::before
+{
+   /* transform: rotate(-45deg) translate(35px, 35px);  */  
+        transform: translateX(-50px);
+        width: 15px;
+}
+
+/* ----------- MENU MOBILE ----------- */ 
+
+.menu1
+{
+    position: fixed;
+    right: 50px;
+    /* top: 10%; */
+    top: 7%;
+    /* background: white; */
+    background: white;
+    width: 40%;
+    height: 30%;
+
+    transition: transform 0.9s ease-in-out;
+    -webkit-transition: transform 0.9s ease-in-out;
+    transform: translateX(200%);
+    -webkit-transform: translateX(200%);  
+    z-index: 2;
+    border-radius: 30px 0 30px 30px ;
+    /* border: 2px solid black; */
+    /* border: 0.5px solid white; */
+    box-sizing: border-box;
+    /* animation: fondu 2.6s ease-in-out; */
+
+
+}
+
+/* @keyframes fondu {
+
+    0% {
+        opacity: 0;
+    }    
+
+    80% {
+        opacity: 0;
+    } 
+
+    100% {
+        opacity: 1;
+    }
+} */
+
+.menu1.isOpen
+{
+    transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+    /* color: white; */
+}
+
+.menu1 .menu1ul
+{
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    right: 35px;
+
+}
+
+.menu1 .menu1ul .menu1li
+{
+    display: flex;
+    flex-direction: column;
+    margin: 0 0;
+
+}
+
+.menu .menu1ul .menu1li .menu1a
+{
+    /* color: white; */
+    text-transform: uppercase;
+}
+
+.menu1 .menu1a
+{
+    text-decoration: none;
+    /* color: black; */
+    color: black;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    /*font-size: 80px;*/
+    /*letter-spacing: .070em;*/
+    text-align: end;
+    font-family: meloriac;
+    margin: 5px 0;
+}
+
+.about
+{
+    font-size: 0.7em !important;
+    padding-top: 10px;
+}
+/* 
+.menu1a:active
+{
+    color: red;
+} */
+
+
+
+
+
+
+/* ----------- RADIOS ----------- */
+
+.pochette
+{
+    height: 41vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+.houselive, .rapuslive
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    left: 5%;
+    top: 3%;
+    width: 70px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.clignote1, .clignote
+{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: red;
+}
+
+.clignote
+{
+    animation: clignote 2.2s ease-out infinite;
+}
+
+@keyframes clignote {
+    0% {opacity: 1}
+
+    50% {opacity: 0}
+
+    100% {opacity: 1}
+}
+
+.clignote1
+{
+    animation: clignote1 2.2s ease-out infinite;
+}
+
+@keyframes clignote1 {
+    0% {opacity: 0}
+
+    50% {opacity: 1}
+
+    100% {opacity: 0}
+}
+
+.live
+{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 10.5vh; */
+    top: 2.7%;
+    right: 50%;
+    left: 50%;
+}
+
+.lives
+{
+    display: flex;
+    justify-content: space-around;
+    width: 110px;
+    height: 20px;
+    border: 2px solid white;
+    text-align: center;
+    border-radius: 50px;
+}
+
+.live1div
+{
+    width: 60px;
+    background-color: white;
+    border-radius: 50px 0 0 50px;
+}
+
+.live2div
+{
+    width: 60px;
+    background-color: black;
+    border-radius: 0 50px 50px 0;
+}
+
+.live1-1
+{
+    color: black;
+}
+
+.live2-1
+{
+    color: white;
+    text-decoration: none;
+}
+
+
+.houselive span, .rapuslive span
+{
+    font-family: meloriac;
+    color: black;
+    font-size: 14px;
+}
+
+
+.house, .rapus
+{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: absolute;
+    right: 5%;
+    top: 3%;
+    width: 70px;
+    height: 20px;
+    background-color: black;
+    border-radius: 10px;
+}
+
+.houseimg, .rapusimg
+{
+    font-family: meloriac;
+    color: white;
+    font-size: 14px;
+}
+
+.live1, .live2
+{
+    position: absolute;
+    left: 5%;
+    bottom: 3%;
+}
+
+.live1 img, .live2 img
+{
+    width: 70px;
+}
+
+.pochette1
+{
+    position: relative;
+    width: 100%;
+    height: 88vh;
+    background-repeat: none;
+    background-size: cover;
+    background-position: 0;
+}
+
+.pochette2
+{
+    position: relative;
+    width: 100%;
+    height: 88vh;
+    background-repeat: none;
+    background-size: cover;
+    background-position: 0;
+    box-sizing: border-box;
+}
+
+.player
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    /* border-top: 2px solid black;
+    border-bottom: 2px solid black; */
+
+    /* border-top: 1px solid white;
+    border-bottom: 1px solid white; */
+
+    background-color: black;
+    width: 100%;
+    height: 6vh;
+}
+
+.bouton
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* margin: 0 5px; */
+    cursor: pointer;
+}
+
+.controls
+{
+    color: white;
+}
+
+.controls
+{
+    width: 30px;
+}
+
+.meta
+{
+    width: 85%;
+    /* padding: 0 0 0 5px; */
+}
+
+.infos
+{
+    font-family: meloriac;
+}
+
+.containertxt, .containertxt1
+{
+    display: flex;
+    overflow: hidden;
+    height: 100%;
+    transform-origin: center;
+    -webkit-transform-origin: center;
+
+    margin-left: 0px;
+}
+
+.txt
+{
+    text-indent: 40px;
+    font-size: 20px;
+    flex-wrap: nowrap;
+    font-family: meloriac;
+    white-space: nowrap;
+    animation: scrollTxt 35s linear infinite;
+    -webkit-animation: scrollTxt 35s linear infinite;
+}
+
+.txt1
+{
+    text-indent: 40px;
+    font-size: 18.5px;
+    flex-wrap: nowrap;
+    font-family: helveticaneue-thin;
+    font-style: italic;
+    white-space: nowrap;
+    animation: scrollTxt 25s linear infinite;
+    -webkit-animation: scrollTxt 25s linear infinite;
+}
+
+@keyframes scrollTxt {
+    0%{
+        transform: translate(0, 0);
+        -webkit-transform: translate(0, 0);
+    }
+
+    100%{
+        transform: translate(-200%, 0);
+        -webkit-transform: translate(-200%, 0);
+    } 
+    
+}
+
+.music-data
+{
+    /* color: black; */
+    color: white;
+    text-transform: uppercase;
+    z-index: 30;
+}

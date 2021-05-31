@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    
+    <title>Application Radio</title>
+</head>
+<body>
+
+    <!-- <nav class="top">
+
+        <div class="logo"><img src="/Ressources/Logo(s)/nouveaulogositeFichier 9.png" alt="" class="logoimg"></div>
+
+        <div class="reseaux">
+            <ul class="iconsoc">
+                <li class="iconsoc1"><a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a></li>
+                <li class="iconsoc1"><a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a></li>
+                <li class="iconsoc1"><a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-spotify"></i></a></li>
+                <li class="iconsoc1"><a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-apple"></i></a></li>
+                <li class="iconsoc1"><a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="logo">
+        <img src="/Ressources/Logo(s)/fond vidéoFichier 5.png" alt="" class="logoimg2">
+        </div>
+
+    </nav> -->
+
+    <section class="radios">
+
+        <iframe src="radios.html" frameborder="0"></iframe>
+    </section>
+
+    <section class="bottom">
+        <div class="player">
+
+            <div class="playergauche">
+    
+                <div class="bouton">
+                    <!-- <div class="controls"><img src="/Ressources/Icônes/play.svg" id="btnPlay"> -->
+                    <div class="controls"><i class="fas fa-play " id="btnPlay"></i>
+                            <!-- <img src="/Ressources/Icônes/pause.svg" id="btnPause" style="display: none;"> -->
+                            <i class="fas fa-pause "id="btnPause" style="display: none;"></i> 
+                        </div>
+                        <div class="radioStream">
+                            <audio id="jp_audio_0" preload="metadata"></audio>
+                    </div>
+                </div>
+                <span>LIVE 1</span>
+                <div class="like"><i class="far fa-heart"></i></div>
+            </div>
+            <div class="separate"></div>
+            <div class="playerdroit">
+    
+                <div class="bouton">
+                    <!-- <div class="controls"><img src="/Ressources/Icônes/play.svg" id="btnPlay-1"> -->
+                    <div class="controls"><i class="fas fa-play " id="btnPlay-1"></i>
+                        <i class="fas fa-pause "id="btnPause-1" style="display: none;"></i> 
+                        </div>
+                        <div class="radioStream">
+                            <audio id="jp_audio_2" preload="metadata"></audio>
+                    </div>
+                </div>
+                <span>LIVE 2</span>
+                <div class="like1"><i class="far fa-heart"></i></div>
+            </div>
+        </div>
+    </section>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="scriptplayerradio1.js"></script>
+    <script src="scriptplayerradio2.js"></script>
+</body>
+</html>

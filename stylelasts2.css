@@ -1,0 +1,449 @@
+@font-face {
+    font-family: 'Niveau Grotesk Bold';
+    src: url('../Niveau\ Grotesk\ Bold.otf');
+}
+
+@font-face {
+    font-family: meloriac;
+    src: url("/Ressources/Fonts/meloriac-webfont.woff");
+}
+
+* {
+    font-family: 'Niveau Grotesk Bold', Geneva, Tahoma, sans-serif;
+    /* font-family: meloriac;
+    font-weight: 100; */
+    list-style: none;
+    text-decoration: none;
+    padding: 0px;
+    margin: 0px;;
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+
+body
+{
+    background-color: black;
+    /* padding: 10% 0 0 0; */
+    /* margin-top: 8%; */
+}
+
+
+
+
+
+
+/* ----------- TOP ----------- */
+
+.pochette1
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 2.3%;
+    z-index: 1000;
+}
+
+.houselive, .rapuslive
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* position: absolute; */
+    left: 5%;
+    top: 1%;
+    width: 70px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.clignote1, .clignote
+{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: red;
+}
+
+.clignote
+{
+    animation: clignote 2.2s ease-out infinite;
+}
+
+@keyframes clignote {
+    0% {opacity: 1}
+
+    50% {opacity: 0}
+
+    100% {opacity: 1}
+}
+
+.clignote1
+{
+    animation: clignote1 2.2s ease-out infinite;
+}
+
+@keyframes clignote1 {
+    0% {opacity: 0}
+
+    50% {opacity: 1}
+
+    100% {opacity: 0}
+}
+
+
+.live
+{
+    /* position: absolute; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 10.5vh; */
+    top: 0.7%;
+    right: 50%;
+    left: 50%;
+}
+
+.lives
+{
+    display: flex;
+    justify-content: space-around;
+    width: 110px;
+    height: 20px;
+    border: 2px solid white;
+    text-align: center;
+    border-radius: 50px;
+}
+
+.live1div
+{
+    width: 60px;
+    background-color: white;
+    border-radius: 50px 0 0 50px;
+}
+
+.live2div
+{
+    width: 60px;
+    background-color: black;
+    border-radius: 0 50px 50px 0;
+}
+
+.live1-1
+{
+    color: black;
+    text-decoration: none;
+}
+
+.live2-1
+{
+    color: white;
+    text-decoration: none;
+}
+
+
+
+.houselive span, .rapuslive span
+{
+    font-family: meloriac;
+    color: black;
+    font-size: 14px;
+}
+
+.menu-btn
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* position: absolute; */
+    width: 70px;
+    height: 20px;
+    background-color: black;
+    color: white;
+    border-radius: 50px;
+    right: 5%;
+    top: 4.3%;
+    font-family: meloriac;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.textmenu
+{
+    font-family: meloriac;
+}
+
+.arrowmenu i
+{
+    animation: bounceright 2s ease-in-out infinite;
+}
+
+@keyframes bounceright {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+}
+
+.houseimg, .rapusimg
+{
+    font-family: meloriac;
+    color: white;
+    font-size: 14px;
+}
+
+.live1, .live2
+{
+    position: absolute;
+    left: 5%;
+    bottom: 1%;
+}
+
+.live1 img, .live2 img
+{
+    width: 70px;
+}
+
+.pochette2
+{
+    position: sticky;
+    top: 99%;
+}
+
+
+
+
+
+
+/* ----------- MENU MOBILE ----------- */ 
+
+.menu1
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    /* right: 50px; */
+    /* top: 10%; */
+    /* top: 7%; */
+    /* background: white; */
+    background: black;
+    width: 100%;
+    height: 100%;
+
+    transition: transform 0.9s ease-in-out;
+    -webkit-transition: transform 0.9s ease-in-out;
+    transform: translateX(200%);
+    -webkit-transform: translateX(200%);  
+    z-index: 2;
+    /* border-radius: 0 0 30px 30px ; */
+    /* border: 2px solid black; */
+    /* border: 0.5px solid white; */
+    box-sizing: border-box;
+    /* animation: fondu 2.6s ease-in-out; */
+
+
+}
+
+/* @keyframes fondu {
+
+    0% {
+        opacity: 0;
+    }    
+
+    80% {
+        opacity: 0;
+    } 
+
+    100% {
+        opacity: 1;
+    }
+} */
+
+.menu1.isOpen
+{
+    transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+    /* color: white; */
+}
+
+.menu1 .menu1ul
+{
+    text-align: center;
+    /* position: absolute; */
+    padding-left: 0;
+    /* top: 45%; */
+    /* transform: translateY(-50%);
+    -webkit-transform: translateY(-50%); */
+    /* right: 35px; */
+
+}
+
+.menu1 .menu1ul .menu1li
+{
+    display: flex;
+    flex-direction: column;
+    margin: 0 0;
+
+}
+
+.menu .menu1ul .menu1li .menu1a
+{
+    /* color: white; */
+    text-transform: uppercase;
+}
+
+.menu1 .menu1a
+{
+    text-decoration: none;
+    /* color: black; */
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    /* font-size: 80px; */
+    letter-spacing: .070em;
+    /* text-align: center; */
+    font-family: meloriac;
+    margin: 5px 0;
+}
+
+.about
+{
+    font-size: 0.7em !important;
+    padding-top: 10px;
+}
+
+.reseaux
+{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    /* align-items: flex-end; */
+    align-items: center;
+}
+
+.iconsoc
+{
+    display: flex;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+.iconsoc1
+{
+    padding: 0 10px;
+}
+
+.iconsoc1 i
+{
+    /* color: black; */
+    color: white;
+}
+/* ----------- CONTENU ----------- */
+
+.all {
+    position: relative;
+    box-sizing: border-box;
+    padding-top: 9%;
+}
+
+.content {
+    width: 95%;
+    margin: auto;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    /* border-radius: 5px; */
+    /* border: 1px solid rgb(228, 223, 223); */
+    display: flex;
+}
+
+#table {
+    width: 100%;
+}
+
+.item-content {
+    display: flex;
+    padding: 7px 0;
+    width: 100%;
+    box-sizing: border-box;
+    margin: auto;
+    /* border-bottom: 1px solid rgb(228, 223, 223); */
+}
+
+.text-content {
+    padding: 0 35px;
+    box-sizing: border-box;
+}
+
+.item-content-end {
+    flex-direction: row-reverse;
+}
+
+.text-align-end {
+    text-align: end;
+}
+
+.gray {
+    color: rgb(172, 169, 169);
+}
+
+.author {
+    font-size: 16px;
+}
+
+.date {
+    font-size: 18px;
+    /* margin-top: 20px; */
+    height: 25px;
+    color: var(--date-color) !important;
+}
+
+.text-date {
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+.black {
+    margin-bottom: 0px;
+}
+
+.img {
+    width: 100px !important;
+    align-self: center;
+}
+
+.ico {
+    width: 18px;
+    float: left;
+}
+
+#movies {
+    width: 100%;
+}
+
+#movies>div:nth-child(10) {
+    border-bottom: none;
+}
+
+.title {
+    font-size: 13px;
+}
+
+.title,
+.author {
+    color: var(--title-artist-color);
+    margin: 5px 0;
+}
+
+:root {
+    --date-color: #EB4526;
+    --title-artist-color: white;
+}
